@@ -8,7 +8,7 @@
     "children":[],
     "name":"Default",
   },
-  "defaultScriptType":0,
+  "defaultScriptType":1,
   "Folders":[],
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[],
@@ -20,6 +20,7 @@
   "name":"Psycho.Eden",
   "resources":[
     {"id":{"name":"rminit","path":"rooms/rminit/rminit.yy",},},
+    {"id":{"name":"poo","path":"scripts/poo/poo.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",

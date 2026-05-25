@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"poo",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"poo",
+  "parent":{
+    "name":"Psycho.Eden",
+    "path":"Psycho.Eden.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
