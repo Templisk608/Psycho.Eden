@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"physicsConstants",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"physicsConstants",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

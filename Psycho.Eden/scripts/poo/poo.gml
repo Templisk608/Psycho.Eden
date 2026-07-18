@@ -1,3 +1,0 @@
-function poo(){
-//does shit
-}

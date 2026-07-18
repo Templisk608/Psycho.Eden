@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"poo",
+  "%Name":"collidersCollision",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"poo",
+  "name":"collidersCollision",
   "parent":{
-    "name":"Psycho.Eden",
-    "path":"Psycho.Eden.yyp",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
