@@ -157,9 +157,11 @@ clingState = new State("wallCling", airborneState)
 			velocity_x = lengthdir_x(jump_wall_strength, _jump_angle);
 			velocity_y = lengthdir_y(jump_wall_strength, _jump_angle);
 			on_horizontal = 0;
-
 		}
 		
+		if bonk {
+			velocity_y *= C_VARIABLE_JUMP_FRICTION;
+		}
 				
 		else if (velocity_y > 0) { // Sliding down a wall reduces velocity
 			velocity_y = min(velocity_y, C_TERMINAL_VELOCITY * C_ON_WALL_FRICTION);
