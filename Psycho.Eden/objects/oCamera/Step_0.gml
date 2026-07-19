@@ -2,11 +2,11 @@
 if keyboard_check_pressed(vk_f11) {window_set_fullscreen(!window_get_fullscreen())}
 
 //Don't bother showing if theres no player instance
-if !instance_exists(player) exit;
+if !instance_exists(oPlayer) exit;
 
 //Continuously center player on the screen
-cam_x = player.x - cam_width/2;
-cam_y = player.y - cam_height/2;
+cam_x = oPlayer.x - cam_width/2;
+cam_y = oPlayer.y - cam_height/2;
 
 //Constrain camera to the room borders
 cam_x = clamp(cam_x, 0, room_width - cam_width);

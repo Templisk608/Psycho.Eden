@@ -12,7 +12,7 @@ function getInputs(){
 		face = _dir; //Last direction we faced
 	}
 	
-	if jump_buffer <= 0 && _jump_held {
+	if jump_buffer <= 0 && _jump_press {
 		jump_buffer = C_JUMP_BUFFER_FRAMES;
 	}
 	

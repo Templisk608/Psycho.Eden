@@ -32,7 +32,7 @@
     {"id":{"name":"oCollider","path":"objects/oCollider/oCollider.yy",},},
     {"id":{"name":"oEntity_Platformer","path":"objects/oEntity_Platformer/oEntity_Platformer.yy",},},
     {"id":{"name":"oEntity","path":"objects/oEntity/oEntity.yy",},},
-    {"id":{"name":"player","path":"objects/player/player.yy",},},
+    {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"Test","path":"rooms/Test/Test.yy",},},
     {"id":{"name":"collidersCollision","path":"scripts/collidersCollision/collidersCollision.yy",},},
     {"id":{"name":"entityCollision","path":"scripts/entityCollision/entityCollision.yy",},},

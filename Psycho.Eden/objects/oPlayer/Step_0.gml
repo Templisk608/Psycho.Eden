@@ -5,7 +5,7 @@ Player_sm.Update();
 platformer_movement();
 
 //Debug
-show_debug_message(string(Player_sm.state.name));
+//show_debug_message(string(Player_sm.state.name));
 
 //Run collision code
 move_collide_state(velocity_x, velocity_y);

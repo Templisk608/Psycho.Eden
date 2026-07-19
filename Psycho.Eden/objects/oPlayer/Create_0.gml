@@ -6,7 +6,8 @@ jump_buffer = 0;
 dash_buffer = 0;
 hasDash = false;
 hasJump = false;
-grounded = 0;
+grounded = false;
+bonk = false;
 face = 1;
 getInputs();
 
@@ -49,7 +50,7 @@ groundedState = new State("grounded")
 		}
 		
 		//Set jump state transition
-		if (inputs._jump_held && hasJump) {
+		if (inputs._jump_press && hasJump) {
 			Player_sm.changeState("jump");
 		}
 	});
@@ -129,11 +130,11 @@ jumpState = new State("jump", airborneState)
 		//While in jump
 		if (jump_buffer > 0) {
 			velocity_y = -jump_strength;
-			on_vertical = 0;
+			on_vertical = 0; //grounded wouldn't update in time, would keep us glued and cause state stutter
 		}
 		
 		//Exit jump
-		if (jump_buffer <= 0 || bonk || !inputs._jump_held) {
+		if (jump_buffer <= 0) || bonk || (!inputs._jump_held) {
 			velocity_y *= C_VARIABLE_JUMP_FRICTION;
 			Player_sm.changeState("fall");				
 		}

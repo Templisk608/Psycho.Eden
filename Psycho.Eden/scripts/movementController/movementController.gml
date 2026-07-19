@@ -1,8 +1,5 @@
 function platformer_movement(){
 	
-	//Take in input
-	getInputs();
-	
 	//Always apply gravity
 	velocity_y = min(velocity_y + C_GRAVITY, C_TERMINAL_VELOCITY);
 	
@@ -21,14 +18,20 @@ function platformer_movement(){
 	switch (string(Player_sm.state.name)) {
 		
 		case "dash":
+			inputs._x_axis = 0;
 			velocity_x = face * move_speed * 2;
 			break;
 			
 		case "crouch":
+			//Take in input
+			getInputs();
 			velocity_x = 0;
 			break;
 			
 		default:
+			//Take in input
+			getInputs();
+			
 			if (inputs._x_axis != 0) {
 			    velocity_x = clamp(velocity_x + inputs._x_speed, -move_speed, move_speed);
 			}

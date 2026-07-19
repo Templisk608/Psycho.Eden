@@ -50,9 +50,10 @@ function collide_none(_entity, _resolved_position)
 	{
 		// If entity is below collider bbox always collide
 		// or if entity is to the right and this instance is not flipped (i.e., image_xscale)
-		if (_entity.bbox_bottom > bbox_bottom || (image_xscale > 0 && _entity.bbox_right > bbox_right)) 		
+		if (_entity.bbox_bottom > bbox_bottom || (image_xscale > 0 && _entity.bbox_right > bbox_right)) {		
 			return max(_resolved_x, bbox_right + _entity.x - _entity.bbox_left);
-	
+		}
+		
 		collide_slope_set_entity_y(_entity)
 
 		return _resolved_x;
@@ -72,9 +73,10 @@ function collide_none(_entity, _resolved_position)
 
 	function collide_top_slope(_entity, _resolved_y)
 	{
-		if (_entity.bbox_bottom > bbox_bottom)
+		if (_entity.bbox_bottom > bbox_bottom) {
 			return collide_top_solid(_entity, _resolved_y);
-	
+		}
+		
 		return collide_bottom_slope(_entity, _resolved_y);
 	}
 
@@ -82,24 +84,28 @@ function collide_none(_entity, _resolved_position)
 	{	
 		// Get the inverse lerp position of the left or right bottom corner of the entity
 		var _pos = 0.5;
-		if (image_xscale > 0)
+		if (image_xscale > 0) {
 			_pos = clamp((_entity.bbox_right - bbox_left) / (bbox_right - bbox_left), 0, 1);
-		else if (image_xscale < 0)
+		}
+		
+		else if (image_xscale < 0) {
 			_pos = 1 - clamp((_entity.bbox_left - bbox_left) / (bbox_right - bbox_left), 0, 1);
-	
+		}
+		
 		// Lerp between the bottom and top of the bbox
 		return min(_resolved_y, _entity.y - _entity.bbox_bottom + lerp(bbox_bottom, bbox_top, _pos));		
 	}
 
-	function collide_slope_set_entity_y(_entity)
-	{
+	function collide_slope_set_entity_y(_entity) {
 		// Get the inverse lerp position of the left or right bottom corner of the entity
 		var _pos = 0.5;
-		if (image_xscale > 0)
+		if (image_xscale > 0) {
 			_pos = clamp((_entity.bbox_right - bbox_left) / (bbox_right - bbox_left), 0, 1);
-		else if (image_xscale < 0)
+		}
+		
+		else if (image_xscale < 0) {
 			_pos = 1 - clamp((_entity.bbox_left - bbox_left) / (bbox_right - bbox_left), 0, 1);
-	
+		}
 		// Lerp between the bottom and top of the bbox
 		_entity.y = min(_entity.y + C_SLOPE_ATTRACT_RANGE, _entity.y - _entity.bbox_bottom + lerp(bbox_bottom, bbox_top, _pos));
 	}
