@@ -34,7 +34,7 @@
     {"$GMObjectProperty":"v2","%Name":"move_acceleration","filters":[],"listItems":[],"multiselect":false,"name":"move_acceleration","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1.2","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"move_air_control","filters":[],"listItems":[],"multiselect":false,"name":"move_air_control","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.75","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"jump_strength","filters":[],"listItems":[],"multiselect":false,"name":"jump_strength","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"8","varType":0,},
-    {"$GMObjectProperty":"v2","%Name":"jump_wall_strength","filters":[],"listItems":[],"multiselect":false,"name":"jump_wall_strength","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"15","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"jump_wall_strength","filters":[],"listItems":[],"multiselect":false,"name":"jump_wall_strength","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"12","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"jump_wall_angle","filters":[],"listItems":[],"multiselect":false,"name":"jump_wall_angle","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"35","varType":0,},
   ],
   "resourceType":"GMObject",

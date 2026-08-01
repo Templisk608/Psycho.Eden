@@ -39,7 +39,6 @@
     {"id":{"name":"getInputs","path":"scripts/getInputs/getInputs.yy",},},
     {"id":{"name":"movementController","path":"scripts/movementController/movementController.yy",},},
     {"id":{"name":"physicsConstants","path":"scripts/physicsConstants/physicsConstants.yy",},},
-    {"id":{"name":"playerController","path":"scripts/playerController/playerController.yy",},},
     {"id":{"name":"stateMachine","path":"scripts/stateMachine/stateMachine.yy",},},
     {"id":{"name":"Plat","path":"sprites/Plat/Plat.yy",},},
     {"id":{"name":"Player","path":"sprites/Player/Player.yy",},},

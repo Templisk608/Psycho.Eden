@@ -7,7 +7,7 @@ function entity_move_collide(_velocity_x, _velocity_y)
 	//Basic move and collision state for a platformer entity
 	//Note: do vertical first to account for one-way platform drop through
 	
-	//********** Vertical ****************************** //
+	//****************************** Vertical ******************************//
 	y += _velocity_y;
 	ds_list_clear(collision_list);
 	var _collisions = instance_place_list(x, y + sign(_velocity_y), oCollider, collision_list, false);
@@ -35,7 +35,7 @@ function entity_move_collide(_velocity_x, _velocity_y)
 		y = _resolved_y;
 	}
 	
-	//********** Horizontal ****************************** //
+	//****************************** Horizontal ****************************** //
 	x += _velocity_x;
 	
 	ds_list_clear(collision_list);

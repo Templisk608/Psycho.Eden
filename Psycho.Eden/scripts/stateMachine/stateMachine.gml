@@ -23,7 +23,7 @@ function StateMachine () constructor{
 	
 	//Method to add new states to the state struct, rather than directly setting states
 	static addState = function(_state){
-		//If we access the struct and the key doesn't already exist, the accessor returns undefined
+		//If we access the struct and the key doesn't already exist, accessor returns undefined
 		//Ensure a state doesn't already exist in the struct
 		if (!is_undefined(states[$ _state.name])) {
 			//Debug message for now, but we can overwrite or exit the functionS
