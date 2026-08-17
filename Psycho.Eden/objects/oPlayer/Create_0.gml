@@ -90,7 +90,7 @@ crouchState = new State("crouch", groundedState)
 	.setUpdate(function () {
 		
 		//Kills horizontal movement
-		velocity_x = 0;
+		inputs._x_axis = 0;
 		
 		//Set idle state transition 
 		if !inputs._down_held {
