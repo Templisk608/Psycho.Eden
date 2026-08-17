@@ -17,13 +17,11 @@ Player_sm = new StateMachine();
 #region //Grounded states
 groundedState = new State("grounded")
 	.setUpdate(function() {
+		getInputs();
 		
 		//Reset jump and dash
 		hasDash = true;
 		hasJump = true;
-		
-		//Set y to terminal velocity for consistent fall_spd
-		//velocity_y = 1;
 		
 		//**************Need to clean this up***********************/
 		//If jump is pressed on drop-down plat, drop down
@@ -92,6 +90,7 @@ crouchState = new State("crouch", groundedState)
 	.setUpdate(function () {
 		
 		//Kills horizontal movement
+		velocity_x = 0;
 		
 		//Set idle state transition 
 		if !inputs._down_held {
@@ -104,6 +103,7 @@ crouchState = new State("crouch", groundedState)
 airborneState = new State("airborne")
 	.setUpdate(function() {
 		
+		getInputs();
 		hasJump = false;
 		
 		//Slow down horizontal speed a tiny bit to feel floatier
@@ -188,7 +188,9 @@ dashState = new State("dash")
 		hasDash = false;
 		
 		if dash_buffer > 0 {
-			velocity_y = -0.6; //Gravity being applied will cancel this out to 0, weird ik
+			velocity_y = -0.6; //Gravity will cancel this out to 0, weird ik
+			inputs._x_axis = 0;
+			velocity_x = face * move_speed * 2;
 		}
 		
 		//Exit dash
